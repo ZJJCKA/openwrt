@@ -151,6 +151,7 @@ mediatek_setup_interfaces()
 	edgecore,eap111|\
 	edgepi,e87n|\
 	hiveton,h5000m|\
+	mangopi,m87k|\
 	huasifei,wh3000|\
 	huasifei,wh3000-pro-emmc|\
 	huasifei,wh3000-pro-nand|\
@@ -292,7 +293,8 @@ mediatek_setup_macs()
 		label_mac=$wan_mac
 		;;
 	edgepi,e87n|\
-	hiveton,h5000m)
+	hiveton,h5000m|\
+	mangopi,m87k)
 		lan_mac=$(macaddr_generate_from_mmc_cid mmcblk0)
 		wan_mac=$(macaddr_add "$lan_mac" 1)
 		label_mac=$wan_mac

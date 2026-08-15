@@ -4,7 +4,7 @@ PKG_NAME:=luci-app-fanctrol
 PKG_VERSION:=3.2.14
 PKG_RELEASE:=8
 
-LUCI_TITLE:=Fan Control for EdgePi E87N
+LUCI_TITLE:=Fan Control for MT7987 PWM fan devices
 LUCI_DEPENDS:=+luci-compat +kmod-hwmon-pwmfan
 LUCI_PKGARCH:=all
 PKG_PROVIDES:=luci-i18n-fanctrol-zh-cn

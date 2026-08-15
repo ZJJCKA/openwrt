@@ -180,7 +180,10 @@ discover_phy_temperature_files()
     local hwmon name input
     PHY_TEMP_FILES=""
 
-    [ "$BOARD_NAME" = "edgepi,e87n" ] || return 0
+    case "$BOARD_NAME" in
+        edgepi,e87n|mangopi,m87k) ;;
+        *) return 0 ;;
+    esac
     set +f
     for hwmon in "$HWMON_ROOT"/hwmon*; do
         [ -r "$hwmon/name" ] || continue
@@ -367,8 +370,8 @@ set_fan_percent()
     max_state="$(cat "$COOLING_PATH/max_state" 2>/dev/null)"
     case "$max_state" in ''|*[!0-9]*|0) return 1 ;; esac
 
-    # E87N DTS lists cooling levels from 0 to 255: state 0 is stopped and
-    # max_state is full speed.
+    # Supported DTS files list cooling levels from 0 to 255: state 0 is
+    # stopped and max_state is full speed.
     state=$(((percent * max_state + 50) / 100))
     [ "$state" -lt 0 ] && state=0
     [ "$state" -gt "$max_state" ] && state="$max_state"

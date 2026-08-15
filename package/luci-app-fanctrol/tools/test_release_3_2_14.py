@@ -367,6 +367,7 @@ def main() -> None:
     assert "SOURCE_NVME1_STATE" in daemon
     assert "SOURCE_NVME2_STATE" in daemon
     assert 'BOARD_NAME="$(cat /tmp/sysinfo/board_name 2>/dev/null)"' in daemon
+    assert "edgepi,e87n|mangopi,m87k)" in daemon
     assert "MODEM_CACHE_FILE" not in daemon
     assert "iwpriv" not in daemon
     assert not (ROOT / "root/usr/bin/fancontrol-sensors").exists()
