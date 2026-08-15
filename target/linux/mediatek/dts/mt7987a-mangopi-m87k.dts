@@ -9,7 +9,7 @@
 #include <dt-bindings/leds/common.h>
 
 / {
-	model = "Mangopi M87K";
+	model = "MangoPi M87K";
 	compatible = "mangopi,m87k", "mediatek,mt7987a", "mediatek,mt7987";
 
 	aliases {
@@ -46,16 +46,14 @@
 
 		led_wan_green: led-wan-green {
 			label = "LED-WAN-G";
-			function = LED_FUNCTION_WAN;
-			color = <LED_COLOR_ID_GREEN>;
+			function = LED_FUNCTION_STATUS;
 			gpios = <&pio 45 GPIO_ACTIVE_LOW>;
 			default-state = "off";
 		};
 
 		led_wan_yellow: led-wan-yellow {
 			label = "LED-WAN-Y";
-			function = LED_FUNCTION_WAN;
-			color = <LED_COLOR_ID_YELLOW>;
+			function = LED_FUNCTION_STATUS;
 			gpios = <&pio 13 GPIO_ACTIVE_LOW>;
 			default-state = "off";
 		};
@@ -63,7 +61,6 @@
 		led_system: led-system {
 			label = "LED-SYS";
 			function = LED_FUNCTION_STATUS;
-			color = <LED_COLOR_ID_GREEN>;
 			gpios = <&pio 11 GPIO_ACTIVE_LOW>;
 			default-state = "on";
 		};

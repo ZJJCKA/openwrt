@@ -1753,7 +1753,7 @@ endef
 TARGET_DEVICES += edgepi_e87n
 
 define Device/mangopi_m87k
-  DEVICE_VENDOR := Mangopi
+  DEVICE_VENDOR := MangoPi
   DEVICE_MODEL := M87K
   DEVICE_DTS := mt7987a-mangopi-m87k
   DEVICE_DTS_DIR := ../dts

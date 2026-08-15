@@ -9,7 +9,7 @@ include $(INCLUDE_DIR)/package.mk
 define Package/e87n-luci-overview
   SECTION:=luci
   CATEGORY:=LuCI
-  TITLE:=EdgePi E87N and Mangopi M87K LuCI overview customizations
+  TITLE:=EdgePi E87N and MangoPi M87K LuCI overview customizations
   DEPENDS:=@TARGET_mediatek_filogic +luci-mod-status
   PKGARCH:=all
 endef
