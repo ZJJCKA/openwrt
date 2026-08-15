@@ -6,7 +6,10 @@ apply_overrides() {
 	local board source status_dir menu_dir changed current_lang
 
 	board="$(cat /tmp/sysinfo/board_name 2>/dev/null)"
-	[ "$board" = 'edgepi,e87n' ] || return 0
+	case "$board" in
+		edgepi,e87n|mangopi,m87k) ;;
+		*) return 0 ;;
+	esac
 
 	source='/usr/share/e87n-luci-overview'
 	status_dir='/www/luci-static/resources/view/status'

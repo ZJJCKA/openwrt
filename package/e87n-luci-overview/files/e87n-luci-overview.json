@@ -1,6 +1,6 @@
 {
 	"e87n-luci-overview": {
-		"description": "Grant access to the EdgePi E87N CPU temperature",
+		"description": "Grant access to the E87N and M87K CPU temperature",
 		"read": {
 			"file": {
 				"/sys/class/thermal/thermal_zone0/temp": [ "read" ],

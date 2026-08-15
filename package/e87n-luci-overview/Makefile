@@ -1,7 +1,7 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=e87n-luci-overview
-PKG_RELEASE:=4
+PKG_RELEASE:=5
 PKG_LICENSE:=Apache-2.0
 
 include $(INCLUDE_DIR)/package.mk
@@ -9,16 +9,16 @@ include $(INCLUDE_DIR)/package.mk
 define Package/e87n-luci-overview
   SECTION:=luci
   CATEGORY:=LuCI
-  TITLE:=EdgePi E87N LuCI overview customizations
+  TITLE:=EdgePi E87N and Mangopi M87K LuCI overview customizations
   DEPENDS:=@TARGET_mediatek_filogic +luci-mod-status
   PKGARCH:=all
 endef
 
 define Package/e87n-luci-overview/description
-  Keeps overview sections expanded, adds the E87N CPU temperature and places
+  Keeps overview sections expanded, adds the E87N/M87K CPU temperature and places
   the LuCI terminal entry after UPnP, defaults LuCI to Simplified Chinese and
   removes the unused System/Plugins entry and combines the DHCP and DNS menu
-  entries under one E87N-only page and moves Network Shares to a top-level NAS
+  entries under one board-specific page and moves Network Shares to a top-level NAS
   menu.
 endef
 

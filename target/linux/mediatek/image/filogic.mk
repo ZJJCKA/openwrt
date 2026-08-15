@@ -1759,6 +1759,7 @@ define Device/mangopi_m87k
   DEVICE_DTS_DIR := ../dts
   IMAGE_SIZE := 131072k
   DEVICE_PACKAGES := -dnsmasq -wpad-basic-mbedtls blkid block-mount btop dnsmasq-full \
+	e87n-luci-overview \
 	e2fsprogs f2fsck \
 	kmod-fs-exfat kmod-fs-ext4 kmod-fs-ntfs3 kmod-fs-vfat \
 	kmod-hwmon-pwmfan kmod-nft-offload kmod-nvme kmod-usb3 \
